@@ -15,15 +15,15 @@ body { margin: 0; background: var(--cream); color: var(--espresso); font-family:
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 .site-header { max-width: var(--max); margin: auto; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; gap: 22px; border-bottom: 1px solid var(--line); }
-.wordmark { font: 2rem/1 "DM Serif Display", serif; text-decoration: none; }
+.wordmark { margin-left: 92px; font: 2rem/1 "DM Serif Display", serif; text-decoration: none; }
 .wordmark span { color: var(--cherry); }
 nav { display: flex; gap: 28px; align-items: center; }
 nav a { text-decoration: none; font-size: .9rem; font-weight: 600; }
-.menu-toggle { border: 0; background: transparent; color: var(--espresso); padding: 8px 0 8px 10px; display: flex; align-items: center; gap: 12px; font: 700 .78rem "DM Sans", sans-serif; text-transform: uppercase; letter-spacing: .1em; cursor: pointer; }
+.menu-toggle { position: fixed; top: 18px; left: max(18px, calc((100vw - 1340px) / 2)); z-index: 70; min-height: 46px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,250,243,.94); color: var(--espresso); padding: 8px 15px; display: flex; align-items: center; gap: 12px; box-shadow: 0 8px 22px rgba(43,33,29,.12); backdrop-filter: blur(10px); font: 700 .78rem "DM Sans", sans-serif; text-transform: uppercase; letter-spacing: .1em; cursor: pointer; }
 .menu-toggle-icon { width: 27px; display: grid; gap: 6px; }
 .menu-toggle-icon i { display: block; height: 2px; background: currentColor; transition: transform .25s; }
 .menu-overlay { position: fixed; inset: 0; z-index: 79; background: rgba(43,33,29,.48); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; }
-.site-menu { position: fixed; inset: 0 0 0 auto; z-index: 80; width: min(430px, 90vw); padding: 30px; background: var(--espresso); color: var(--paper); display: flex; flex-direction: column; transform: translateX(100%); visibility: hidden; transition: transform .35s ease, visibility .35s; }
+.site-menu { position: fixed; inset: 0 auto 0 0; z-index: 80; width: min(430px, 90vw); padding: 30px; background: var(--espresso); color: var(--paper); display: flex; flex-direction: column; transform: translateX(-100%); visibility: hidden; transition: transform .35s ease, visibility .35s; }
 .menu-open { overflow: hidden; }
 .menu-open .menu-overlay { opacity: 1; visibility: visible; }
 .menu-open .site-menu { transform: none; visibility: visible; }
@@ -153,7 +153,9 @@ footer div { display: flex; gap: 20px; }
 }
 @media (max-width: 600px) {
   .site-header { padding: 18px; }
+  .wordmark { margin-left: 54px; }
   .site-header > nav { display: none; }
+  .menu-toggle { top: 12px; left: 12px; width: 46px; padding: 8px 9px; justify-content: center; }
   .menu-toggle-label { display: none; }
   .hero, .work { padding-left: 18px; padding-right: 18px; }
   .hero h1 { font-size: 3.35rem; }
