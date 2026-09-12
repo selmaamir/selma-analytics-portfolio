@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
   <header class="site-header">
@@ -19,7 +19,31 @@
       <a href="https://www.linkedin.com/in/selma-amir-424bb62b6/" target="_blank" rel="noreferrer">LinkedIn</a>
       <a class="nav-pill" href="https://github.com/selmaamir" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
+    <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
   </header>
+
+  <div class="menu-overlay" data-menu-close></div>
+  <aside class="site-menu" id="site-menu" aria-label="Portfolio menu" aria-hidden="true">
+    <div class="site-menu-top">
+      <span>Navigate</span>
+      <button class="menu-close" type="button" data-menu-close aria-label="Close menu">Close ×</button>
+    </div>
+    <nav class="site-menu-links" aria-label="Sidebar navigation">
+      <a href="#top"><span>01</span>Home</a>
+      <a href="#project-menu"><span>02</span>Projects</a>
+      <a href="#about"><span>03</span>About me</a>
+      <a href="#contact"><span>04</span>Contact</a>
+    </nav>
+    <div class="site-menu-socials">
+      <p>Find me online</p>
+      <a href="https://www.linkedin.com/in/selma-amir-424bb62b6/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a href="https://github.com/selmaamir" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.instagram.com/databysel/" target="_blank" rel="noreferrer">Instagram · @databysel ↗</a>
+    </div>
+  </aside>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
@@ -203,13 +227,14 @@
       </div>
     </section>
 
-    <section class="contact reveal">
+    <section class="contact reveal" id="contact">
       <p>Let’s connect</p>
       <h2>Have a question worth answering?</h2>
       <div class="contact-links">
         <a href="mailto:selmaamir510@gmail.com">Email me <span>↗</span></a>
         <a href="https://www.linkedin.com/in/selma-amir-424bb62b6/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
         <a href="https://github.com/selmaamir" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <a href="https://www.instagram.com/databysel/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
       </div>
     </section>
   </main>
@@ -217,9 +242,9 @@
   <footer>
     <p>Selma Nayla Amir · Portfolio 2026</p>
     <p>Business Analytics · Financial Technology</p>
-    <div><a href="https://www.linkedin.com/in/selma-amir-424bb62b6/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="#top">Back to top ↑</a></div>
+    <div><a href="https://www.linkedin.com/in/selma-amir-424bb62b6/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/databysel/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="#top">Back to top ↑</a></div>
   </footer>
   <a class="back-to-top" href="#top" aria-label="Back to top"><span>Top</span> ↑</a>
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
